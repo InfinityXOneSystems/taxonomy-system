@@ -1,0 +1,30 @@
+apiVersion: core.infinityxonesystems.com/v1alpha1
+kind: MetaSystem
+metadata:
+  name: taxonomy-system
+  description: Global semantic governance with taxonomy.schema.yaml, rules, validation, and examples.
+spec:
+  type: control-plane
+  version: 0.1.0
+  repository: https://github.com/InfinityXOneSystems/taxonomy-system
+  integrations:
+    - name: orchestrator-system
+      description: Integrates with the orchestrator-system for schema deployment and validation enforcement.
+      api_version: orchestrator.infinityxonesystems.com/v1
+  components:
+    - name: taxonomy-schema
+      type: schema
+      path: taxonomy.schema.yaml
+      description: The core schema defining taxonomy items.
+    - name: validation-engine
+      type: script
+      path: validation.py
+      description: Python script for validating taxonomy data against the schema and rules.
+    - name: rules-directory
+      type: directory
+      path: rules/
+      description: Directory containing custom validation rules.
+    - name: examples-directory
+      type: directory
+      path: examples/
+      description: Directory containing valid and invalid taxonomy data examples.
