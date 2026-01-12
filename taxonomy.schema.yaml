@@ -1,0 +1,21 @@
+type: object
+properties:
+  id:
+    type: string
+    description: Unique identifier for the taxonomy item
+  name:
+    type: string
+    description: Display name of the taxonomy item
+  description:
+    type: string
+    description: Detailed description of the taxonomy item
+  parent_id:
+    type: string
+    description: ID of the parent taxonomy item, if any
+  metadata:
+    type: object
+    additionalProperties: true
+    description: Additional metadata for the taxonomy item
+required:
+  - id
+  - name

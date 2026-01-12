@@ -1,0 +1,20 @@
+[
+  {
+    "id": "product_category",
+    "name": "Product Category",
+    "description": "Categorization of products",
+    "metadata": {
+      "source": "internal"
+    }
+  },
+  {
+    "id": "electronics",
+    "name": "Electronics",
+    "parent_id": "product_category"
+  },
+  {
+    "id": "smartphones",
+    "name": "Smartphones",
+    "parent_id": "electronics"
+  }
+]
